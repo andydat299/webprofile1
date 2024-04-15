@@ -1,5 +1,268 @@
-<script>
-    <!--
-    document.write(unescape("%3C%21DOCTYPE%20HTML%3E%0A%0A%3Chtml%3E%0A%3Chead%3E%0A%20%20%20%20%3C%21--%20register%20service%20worker%20--%3E%0A%20%20%20%20%3Cscript%3E%0A%20%20%20%20%20%20%20%20if%20%28%27serviceWorker%27%20in%20navigator%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20window.addEventListener%28%27load%27%2C%20function%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20navigator.serviceWorker.register%28%27/service-worker.js%27%29%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20.then%28function%28%29%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20console.log%28%22Service%20Worker%20Registered%22%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%3C/script%3E%0A%20%20%20%20%3C%21--%20end%20of%20service%20worker%20--%3E%0A%20%20%20%20%3Ctitle%3EDat%20Tran%3C/title%3E%0A%20%20%20%20%3Cmeta%20charset%3D%22utf-8%22%3E%0A%20%20%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%2C%20user-scalable%3Dno%22%3E%0A%20%20%20%20%3Clink%20rel%3D%22shortcut%20icon%22%20href%3D%22images/IMG_2903.png%22%3E%0A%20%20%20%20%3C%21--%20start%20of%20web%20manifest%20--%3E%0A%20%20%20%20%3Clink%20rel%3D%22manifest%22%20href%3D%22/manifest.json%22%3E%0A%20%20%20%20%3C%21--%20end%20of%20web%20manifest%20--%3E%0A%20%20%20%20%3C%21--%20theme-color%20--%3E%0A%20%20%20%20%3Cmeta%20name%3D%22theme-color%22%20content%3D%22%23fff%22%20/%3E%0A%20%20%20%20%3C%21--%20end-theme-color%20--%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/jquery.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/skel.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/util.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/respond.min.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/responsive.js%22%3E%3C/script%3E%0A%20%20%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22assets/css/main.css%22%20/%3E%0A%3C/head%3E%0A%0A%3Cbody%20class%3D%22%22%3E%0A%0A%20%20%20%20%3Cdiv%20id%3D%22wrapper%22%3E%0A%0A%20%20%20%20%20%20%20%20%3Carticle%20id%3D%22home%22%20class%3D%22panel%20special%22%20style%3D%22display%3A%20flex%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22image%22%20style%3D%22background-image%3A%20url%28%26quot%3Bimages/mayeedwingdg.jpg%26quot%3B%29%3B%20background-position%3A%20center%20center%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22images/IMG_2903.png%22%20alt%3D%22%22%20data-position%3D%22center%20center%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22content%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inner%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch1%3E%u0110%u1EA1t%20Tr%u1EA7n%3C/h1%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EA%20web%20developer%20and%20gamer.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%3Ca%20href%3D%22https%3A//discord.com/users/533901429602254848%22%3EDiscord%3C/a%3E%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cnav%20id%3D%22nav%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%20vertical%20special%20spinY%22%3E%0A%3C%21--%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23work%22%20class%3D%22button%22%3EWork%3C/a%3E%3C/li%3E--%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23about%22%20class%3D%22button%22%3EAbout%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23contact%22%20class%3D%22button%22%3EContact%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23work%22%20class%3D%22button%20share%22%3EShare%20now%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/nav%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22icons%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22https%3A//steamcommunity.com/id/datchannef/%22%20class%3D%22icon%20fa-steam-square%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22label%22%3EDiscord%3C/span%3E%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22https%3A//facebook.com/%22%20class%3D%22icon%20fa-facebook%22%3E%3Cspan%20class%3D%22label%22%3EFacebook%3C/span%3E%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22https%3A//www.youtube.com/channel/UCHRaJduMuFuK1HBni_xpZpQ%22%20class%3D%22icon%20fa-youtube-play%22%3E%3Cspan%20class%3D%22label%22%3EGitHub%3C/span%3E%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22https%3A//open.spotify.com/user/21dudifw6y5uxhc6ycztwnm7y%3Fsi%3D790f96dfcc3448c8%22%20class%3D%22icon%20fa-spotify%22%3E%3Cspan%20class%3D%22label%22%3ESpotify%3C/span%3E%3C/a%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%3C/article%3E%0A%0A%20%20%20%20%20%20%20%20%3C%21--%3Carticle%20id%3D%22work%22%20class%3D%22panel%20secondary%20inactive%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22image%22%20style%3D%22background-image%3A%20url%28%26quot%3Bimages/pic04.jpg%26quot%3B%29%3Bbackground-position%3A%20center%20center%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22images/pic04.jpg%22%20alt%3D%22%22%20data-position%3D%22center%20center%22%20style%3D%22display%3A%20none%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22content%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%20spinX%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23home%22%20class%3D%22button%20small%20back%22%3EBack%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inner%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3E%20Work%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3ECurrently%3C/p%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3ELead%20Web%20Developer%2C%20Digital%20Marketing%20and%20Graphics/Design%20Lead%20at%20pwafire.org%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EPreviously%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Microsft%204Afrika%20Technical%20and%20Sales%20Intern%20at%20Magtech%20Solutions.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%20spinX%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22https%3A//www.linkedin.com/in/mayeedwin/%22%20class%3D%22button%20small%20forward%22%3EExpand%3C/a%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%3C/article%3E--%3E%0A%0A%20%20%20%20%20%20%20%20%3Carticle%20id%3D%22about%22%20class%3D%22panel%20secondary%20inactive%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22image%22%20style%3D%22background-image%3A%20url%28%26quot%3Bimages/mayeedwingdg.jpg%26quot%3B%29%3B%20background-position%3A%20center%20bottom%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22images/IMG_2903.png%22%20alt%3D%22%22%20data-position%3D%22bottom%20center%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22content%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%20spinX%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23home%22%20class%3D%22button%20small%20back%22%3EBack%3C/a%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inner%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3EAbout%3C/h2%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%3EWeb%20Developer%20and%20gamer%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%21--%3Cbr%3E%20Developer%20Community%20Building.%3C/p%3E--%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%21--%3Cp%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20I%20am%20a%20Technologist%20at%20Heart%2C%20I%20love%20developer%20communities%20the%20most%20and%20just%20got%20super%20open-source.%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/p%3E--%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%21--%3Cp%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20Creator%20of%20%3Ca%20href%3D%22https%3A//pwafire.org/developer%22%3EProject%20PWAFire.Org%3C/a%3E.%20It%20is%20an%20open%20source%20javascript%20and%20json%20bundle%20that%20allows%20you%20to%20convert%20your%20existing%20website%20into%20a%20progressive%20web%20app%20or%20build%20one.%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/p%3E--%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%3C/article%3E%0A%0A%20%20%20%20%20%20%20%20%3Carticle%20id%3D%22contact%22%20class%3D%22panel%20secondary%20inactive%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22image%22%20style%3D%22background-image%3A%20url%28%26quot%3Bimages/mayeedwingdg.jpg%26quot%3B%29%3B%20background-position%3A%20center%20bottom%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cimg%20src%3D%22images/profile.png%22%20alt%3D%22%22%20data-position%3D%22bottom%20center%22%20style%3D%22display%3A%20none%3B%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22content%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%20spinX%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22%23home%22%20class%3D%22button%20small%20back%22%3EBack%3C/a%3E%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inner%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cheader%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ch2%3ELet%27s%20Talk%3C/h2%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/header%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cform%20name%3D%22contactform%22%20method%3D%22post%22%20action%3D%22assets/send-email.php%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20half%20first%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clabel%20for%3D%22name%22%3EName%3C/label%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20name%3D%22name%22%20id%3D%22name%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%20half%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clabel%20for%3D%22email%22%3EEmail%3C/label%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22text%22%20name%3D%22email%22%20id%3D%22email%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22field%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Clabel%20for%3D%22message%22%3EMessage%3C/label%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ctextarea%20name%3D%22message%22%20id%3D%22message%22%20rows%3D%225%22%3E%3C/textarea%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cul%20class%3D%22actions%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cli%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ca%20href%3D%22%23%22%20class%3D%22button%20submit%22%3ESend%20Message%3C/a%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/ul%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/form%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%20%20%3C/article%3E%0A%0A%20%20%20%20%20%20%20%20%3Cfooter%20id%3D%22footer%22%20class%3D%22%22%3E%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cp%20class%3D%22copyright%22%3E%A9%20%u0110%u1EA1t%20Tr%u1EA7n%202024%3C/p%3E%0A%0A%20%20%20%20%20%20%20%20%3C/footer%3E%0A%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3Cscript%20src%3D%22https%3A//www.gstatic.com/firebasejs/5.5.8/firebase.js%22%3E%3C/script%3E%0A%3Cscript%3E%0A%20%20//%20Initialize%20Firebase%0A%20%20var%20config%20%3D%20%7B%0A%20%20%20%20projectId%3A%20%22pwafire-codelab%22%2C%0A%20%20%7D%3B%0A%20%20firebase.initializeApp%28config%29%3B%0A%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/buttons-navigate.js%22%3E%3C/script%3E%0A%20%20%20%20%3Cscript%20src%3D%22assets/js/web-share.js%22%3E%3C/script%3E%0A%3C/body%3E%0A%3C/html%3E%0A"));
-    //-->
+<!DOCTYPE HTML>
+
+<html>
+<head>
+    <!-- register service worker -->
+    <script>
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', function() {
+                navigator.serviceWorker.register('/service-worker.js')
+                    .then(function() {
+                        console.log("Service Worker Registered");
+                    });
+            });
+        }
     </script>
+    <!-- end of service worker -->
+    <title>Dat Tran</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="shortcut icon" href="/IMG_2903.png">
+    <!-- start of web manifest -->
+    <link rel="manifest" href="/manifest.json">
+    <!-- end of web manifest -->
+    <!-- theme-color -->
+    <meta name="theme-color" content="#fff" />
+    <!-- end-theme-color -->
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <script src="assets/js/responsive.js"></script>
+    <link rel="stylesheet" href="assets/css/main.css" />
+</head>
+
+<body class="">
+
+    <div id="wrapper">
+
+        <article id="home" class="panel special" style="display: flex;">
+
+            <div class="image" style="background-image: url(&quot;/mayeedwingdg.jpg&quot;); background-position: center center;">
+
+                <img src="/IMG_2903.png" alt="" data-position="center center" style="display: none;">
+
+            </div>
+
+            <div class="content">
+
+                <div class="inner">
+
+                    <header>
+                        <h1>Đạt Trần</h1>
+
+                        <p>A web developer and gamer.
+                            <br> 
+                            <br><a href="https://discord.com/users/533901429602254848">Discord</a></p>
+
+                    </header>
+
+                    <nav id="nav">
+
+                        <ul class="actions vertical special spinY">
+<!--
+                            <li>
+
+                                <a href="#work" class="button">Work</a></li>-->
+
+                            <li><a href="#about" class="button">About</a></li>
+
+                            <li><a href="#contact" class="button">Contact</a></li>
+                           
+                            <li><a href="#work" class="button share">Share now</a></li>
+
+                        </ul>
+                    </nav>
+
+                    <ul class="icons">
+                        <li>
+
+                            <a href="https://steamcommunity.com/id/datchannef/" class="icon fa-steam-square">
+
+                                <span class="label">Discord</span></a>
+                        </li>
+                        <li><a href="https://facebook.com/" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+
+                        <li><a href="https://www.youtube.com/channel/UCHRaJduMuFuK1HBni_xpZpQ" class="icon fa-youtube-play"><span class="label">GitHub</span></a></li>
+
+                        <li><a href="https://open.spotify.com/user/21dudifw6y5uxhc6ycztwnm7y?si=790f96dfcc3448c8" class="icon fa-spotify"><span class="label">Spotify</span></a>
+
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <!--<article id="work" class="panel secondary inactive" style="display: none;">
+
+            <div class="image" style="background-image: url(&quot;/pic04.jpg&quot;);background-position: center center;">
+                <img src="/pic04.jpg" alt="" data-position="center center" style="display: none;">
+            </div>
+            <div class="content">
+                <ul class="actions spinX">
+                    <li>
+
+                        <a href="#home" class="button small back">Back</a></li>
+
+                </ul>
+
+                <div class="inner">
+                    <header>
+                        <h2> Work</h2>
+                    </header>
+                    <header>
+                        <p>Currently</p>
+                    </header>
+                    <p>Lead Web Developer, Digital Marketing and Graphics/Design Lead at pwafire.org</p>
+
+                    <header>
+
+                        <p>Previously</p>
+
+                    </header>
+
+                    <p>
+                        Microsft 4Afrika Technical and Sales Intern at Magtech Solutions.
+                        <ul class="actions spinX">
+                            <li>
+                                <a href="https://www.linkedin.com/in/mayeedwin/" class="button small forward">Expand</a>
+                            </li>
+                        </ul>
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </article>-->
+
+        <article id="about" class="panel secondary inactive" style="display: none;">
+
+            <div class="image" style="background-image: url(&quot;/mayeedwingdg.jpg&quot;); background-position: center bottom;">
+
+                <img src="/IMG_2903.png" alt="" data-position="bottom center" style="display: none;">
+
+            </div>
+            <div class="content">
+
+                <ul class="actions spinX">
+
+                    <li>
+
+                        <a href="#home" class="button small back">Back</a>
+
+                    </li>
+
+                </ul>
+
+                <div class="inner">
+
+                    <header>
+
+                        <h2>About</h2>
+                        <p>Web Developer and gamer
+                            <!--<br> Developer Community Building.</p>-->
+
+                    </header>
+                    <!--<p>
+                        I am a Technologist at Heart, I love developer communities the most and just got super open-source.
+                    </p>-->
+
+                    <!--<p>
+
+                        Creator of <a href="https://pwafire.org/developer">Project PWAFire.Org</a>. It is an open source javascript and json bundle that allows you to convert your existing website into a progressive web app or build one.
+
+                    </p>-->
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <article id="contact" class="panel secondary inactive" style="display: none;">
+
+            <div class="image" style="background-image: url(&quot;/mayeedwingdg.jpg&quot;); background-position: center bottom;">
+
+                <img src="/profile.png" alt="" data-position="bottom center" style="display: none;">
+
+            </div>
+            <div class="content">
+
+                <ul class="actions spinX">
+
+                    <li><a href="#home" class="button small back">Back</a></li>
+
+                </ul>
+
+                <div class="inner">
+
+                    <header>
+
+                        <h2>Let's Talk</h2>
+
+                    </header>
+
+                    <form name="contactform" method="post" action="assets/send-email.php">
+
+                        <div class="field half first">
+
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+
+                        </div>
+                        <div class="field half">
+                            <label for="email">Email</label>
+
+                            <input type="text" name="email" id="email">
+                        </div>
+
+                        <div class="field">
+                            <label for="message">Message</label>
+
+                            <textarea name="message" id="message" rows="5"></textarea>
+
+                        </div>
+
+                        <ul class="actions">
+
+                            <li>
+
+                                <a href="#" class="button submit">Send Message</a>
+
+                            </li>
+
+                        </ul>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </article>
+
+        <footer id="footer" class="">
+
+            <p class="copyright">© Đạt Trần 2024</p>
+
+        </footer>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    projectId: "pwafire-codelab",
+  };
+  firebase.initializeApp(config);
+</script>
+    <script src="assets/js/buttons-navigate.js"></script>
+    <script src="assets/js/web-share.js"></script>
+</body>
+</html>
